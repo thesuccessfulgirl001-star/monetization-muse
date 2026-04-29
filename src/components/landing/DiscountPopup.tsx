@@ -79,7 +79,7 @@ export function DiscountPopup() {
               className="mt-8 btn-gold-fill w-full"
               style={{ width: "100%" }}
             >
-              Get My Discount →
+              Claim Now & Pay ${PRICE_DISCOUNT} →
             </a>
             <p className="mt-4 text-[11px] text-[#888]">
               Secure checkout · Instant delivery · Powered by Whop
