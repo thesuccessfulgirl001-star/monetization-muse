@@ -14,7 +14,19 @@ export function Hero() {
         }}
       />
       <div className="relative mx-auto max-w-[1100px] px-5 md:px-10 pt-24 md:pt-36 pb-24 md:pb-36 text-center">
-        <p className="label-eyebrow mb-8">For Fashion Creators Who Are Done Waiting</p>
+        <p
+          className="mb-10 font-display italic text-2xl md:text-4xl glow-pulse"
+          style={{
+            background: "var(--gradient-gold-shimmer)",
+            backgroundSize: "200% auto",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+            animation: "shimmer 4s linear infinite",
+          }}
+        >
+          For Fashion Creators Who Are Done Waiting
+        </p>
         <h1 className="font-display text-[44px] leading-[1.05] sm:text-6xl md:text-[88px] md:leading-[1.02] font-normal tracking-[-0.015em]">
           You Have the Audience.
           <br />
