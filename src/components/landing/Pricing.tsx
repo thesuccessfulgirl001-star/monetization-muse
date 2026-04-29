@@ -3,12 +3,10 @@ import { useFadeIn } from "@/hooks/use-fade-in";
 
 const INCLUDES = [
   "11-part complete execution system",
-  "3 copy-paste Manus research prompts",
   "Full AI product creation prompt",
-  "Gamma, Canva & Figma design prompts",
-  "Full Lovable landing page prompt",
+  "Full no-code landing page guide",
   "21-day content warm-up plan with hooks and CTAs",
-  "Two launch paths — low-ticket and high-ticket",
+  "How to create a no-brainer offer",
   "The 7-layer money model",
   "The complete rescue plan",
   "Instant download via Whop",
