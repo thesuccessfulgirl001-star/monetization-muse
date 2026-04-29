@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { WHOP_URL } from "./constants";
 import { useFadeIn } from "@/hooks/use-fade-in";
+import { AnalogClock } from "./AnalogClock";
 
 const KEY = "fcmp:urgency-deadline";
 const DURATION = 24 * 60 * 60 * 1000;
@@ -48,26 +49,31 @@ export function Urgency() {
           Early buyers get the best price. That's you, right now.
         </p>
 
-        <div className="mt-14 mx-auto inline-flex items-end gap-4 md:gap-7 bg-[#0F0F0F] border border-gold/40 rounded-lg px-7 md:px-12 py-7 md:py-9">
-          {[
-            { v: h, l: "Hours" },
-            { v: m, l: "Minutes" },
-            { v: s, l: "Seconds" },
-          ].map((u, i, arr) => (
-            <div key={u.l} className="flex items-end gap-4 md:gap-7">
-              <div className="text-center">
-                <div className="font-display text-gold text-5xl md:text-7xl tabular-nums leading-none">
-                  {u.v}
+        <div className="mt-14 mx-auto inline-flex items-center gap-6 md:gap-9 bg-[#080808] border border-gold/40 rounded-lg px-7 md:px-14 py-7 md:py-10"
+          style={{ boxShadow: "0 0 60px -10px rgba(201,168,76,0.25), inset 0 0 40px rgba(201,168,76,0.05)" }}>
+          <AnalogClock size={92} />
+          <div className="flex items-end gap-4 md:gap-7">
+            {[
+              { v: h, l: "Hours" },
+              { v: m, l: "Minutes" },
+              { v: s, l: "Seconds" },
+            ].map((u, i, arr) => (
+              <div key={u.l} className="flex items-end gap-4 md:gap-7">
+                <div className="text-center">
+                  <div className="font-display text-5xl md:text-7xl tabular-nums leading-none glow-pulse"
+                    style={{ background: "var(--gradient-gold-shimmer)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
+                    {u.v}
+                  </div>
+                  <div className="mt-3 text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-[#9D9D9D]">
+                    {u.l}
+                  </div>
                 </div>
-                <div className="mt-3 text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-[#9D9D9D]">
-                  {u.l}
-                </div>
+                {i < arr.length - 1 && (
+                  <span className="text-gold text-3xl md:text-5xl pb-7 md:pb-10 opacity-60">:</span>
+                )}
               </div>
-              {i < arr.length - 1 && (
-                <span className="text-gold text-3xl md:text-5xl pb-7 md:pb-10">:</span>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <a
