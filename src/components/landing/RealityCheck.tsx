@@ -12,19 +12,39 @@ export function RealityCheck() {
     <section ref={ref} className="bg-ink text-paper">
       <div className="mx-auto max-w-[1200px] px-5 md:px-10 py-28 md:py-40">
         <p className="label-eyebrow text-center">The Problem</p>
-        <h2 className="mt-6 text-center font-display text-3xl md:text-5xl leading-[1.1] max-w-3xl mx-auto text-paper">
-          The Fashion Creator Trap <span className="italic">Nobody Talks About.</span>
+        <h2 className="mt-6 text-center font-display font-bold text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto text-paper">
+          The Fashion Creator Trap{" "}
+          <span className="italic gold-text">Nobody Talks About.</span>
         </h2>
-        <div className="mt-20 grid gap-12 md:gap-10 md:grid-cols-3">
+        <div className="mt-20 grid gap-10 md:grid-cols-3">
           {COLS.map((text, i) => (
-            <div key={i} className="pt-8 border-t border-gold/60">
-              <span className="label-eyebrow">0{i + 1}</span>
-              <p className="mt-5 text-[15px] leading-[1.85] text-[#C9C4BA]">{text}</p>
+            <div
+              key={i}
+              className="relative pt-12 px-7 pb-8 rounded-lg border border-gold/40 bg-[#0A0A0A] hover:border-gold transition-all duration-500"
+              style={{ boxShadow: "0 20px 60px -30px rgba(201,168,76,0.4)" }}
+            >
+              <span
+                className="absolute -top-7 left-6 font-display font-bold text-6xl md:text-7xl leading-none"
+                style={{
+                  background: "var(--gradient-gold-shimmer)",
+                  backgroundSize: "200% auto",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  textShadow: "0 4px 30px rgba(201,168,76,0.4)",
+                  animation: "shimmer 4s linear infinite",
+                }}
+              >
+                0{i + 1}
+              </span>
+              <p className="mt-4 text-[15.5px] leading-[1.85] text-paper/90 font-medium">
+                {text}
+              </p>
             </div>
           ))}
         </div>
         <blockquote className="mt-24 mx-auto max-w-3xl pl-8 border-l-2 border-gold">
-          <p className="font-display italic text-2xl md:text-[34px] leading-[1.35] text-paper">
+          <p className="font-display italic font-semibold text-2xl md:text-[34px] leading-[1.35] text-paper">
             "Every time you answer 'where did you get that?' for free — you're giving away
             the thing people would pay for."
           </p>
