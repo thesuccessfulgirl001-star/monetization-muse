@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Clock, X } from "lucide-react";
+import { X } from "lucide-react";
 import { WHOP_URL, PRICE_FULL, PRICE_DISCOUNT } from "./constants";
+import { AnalogClock } from "./AnalogClock";
 
 const SESSION_KEY = "fcmp:discount-shown";
 const TRIGGER_MS = 2 * 60 * 1000; // 2 minutes
@@ -55,7 +56,7 @@ export function DiscountPopup() {
           <>
             <p className="label-eyebrow">Limited-Time Offer</p>
             <h3 className="mt-5 font-display text-2xl md:text-3xl leading-[1.2] text-paper">
-              You've Unlocked a <span className="italic gold-underline">Limited-Time Discount.</span>
+              You've Unlocked a <span className="italic gold-underline">10% Discount.</span>
             </h3>
             <p className="mt-5 text-[14px] leading-[1.7] text-[#C9C4BA]">
               Claim it now and pay <span className="text-gold font-semibold">${PRICE_DISCOUNT}</span>{" "}
@@ -63,9 +64,9 @@ export function DiscountPopup() {
               When this timer hits zero — the discount is gone.
             </p>
 
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <Clock className="size-9 text-gold" strokeWidth={1.5} />
-              <div className="font-display text-gold text-5xl md:text-6xl tabular-nums tracking-tight">
+            <div className="mt-8 flex items-center justify-center gap-5">
+              <AnalogClock size={84} />
+              <div className="font-display text-5xl md:text-6xl tabular-nums tracking-tight glow-pulse" style={{ background: "var(--gradient-gold-shimmer)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
                 {m}:{s}
               </div>
             </div>
@@ -78,7 +79,7 @@ export function DiscountPopup() {
               className="mt-8 btn-gold-fill w-full"
               style={{ width: "100%" }}
             >
-              Claim My Discount →
+              Get My Discount →
             </a>
             <p className="mt-4 text-[11px] text-[#888]">
               Secure checkout · Instant delivery · Powered by Whop
