@@ -5,7 +5,7 @@ const PARTS: { n: string; title: string; body: string }[] = [
   { n: "02", title: "The Style Utility Gap", body: "Why \"inspo\" is free and always will be — and how to position yourself in the one zone of the market where people actually spend money." },
   { n: "03", title: "Research & Validation", body: "Three copy-paste Manus prompts that do your entire competitor research, audience pain analysis, and Instagram audit in under 48 hours." },
   { n: "04", title: "Product Creation with AI", body: "The exact Manus prompt that generates your complete digital product — outline, module content, offer name, and sales copy — in one session." },
-  { n: "05", title: "Every Tool You Need", body: "Manus · Gamma · Canva · Figma · Lovable · Carrd · Systeme.io · ConvertKit · MailerLite · Stripe · Gumroad · Whop. Every tool named, every prompt written for you — copy, paste, launch." },
+  { n: "05", title: "Every Tool You Need", body: "A curated stack of the exact AI, design, email, and checkout tools that power the entire system — pre-mapped to each step so you never waste time researching what to use or how to use it." },
   { n: "06", title: "The Grand Slam Offer", body: "How to package your product so it feels worth $300 and sells for $47. The value stack formula, the three pricing tiers, and the price anchor line that makes buyers feel smart for purchasing." },
   { n: "07", title: "The Landing Page", body: "Section-by-section copy for your entire sales page — plus a full Lovable prompt that generates the whole thing in minutes." },
   { n: "08", title: "The 21-Day Content Warm-Up", body: "A day-by-day plan across 6 emotional layers with hooks, post ideas, story formats, and CTAs — all designed to have your audience ready to buy before the cart even opens." },
@@ -31,15 +31,35 @@ export function WhatsInside() {
           {PARTS.map((p) => (
             <article
               key={p.n}
-              className="rounded-lg border border-[#1F1F1F] bg-[#0F0F0F] p-7 md:p-8 hover:border-gold/60 transition-colors duration-500"
+              className="card-luxe relative p-7 md:p-8 overflow-hidden"
+              style={{ boxShadow: "0 0 0 1px rgba(201,168,76,0.25), inset 0 1px 0 rgba(244,226,160,0.12)" }}
             >
-              <p className="text-gold text-[11px] tracking-[0.22em] uppercase font-semibold">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 opacity-60"
+                style={{
+                  background: "linear-gradient(110deg, transparent 30%, rgba(244,226,160,0.18) 50%, transparent 70%)",
+                  backgroundSize: "200% 100%",
+                  animation: "shimmer 5s linear infinite",
+                }}
+              />
+              <p
+                className="relative text-[11px] tracking-[0.22em] uppercase font-semibold"
+                style={{
+                  background: "var(--gradient-gold-shimmer)",
+                  backgroundSize: "200% auto",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  animation: "shimmer 4s linear infinite",
+                }}
+              >
                 Part {p.n}
               </p>
-              <h3 className="mt-3 font-display text-[22px] md:text-[26px] leading-[1.2] text-paper">
+              <h3 className="relative mt-3 font-display text-[22px] md:text-[26px] leading-[1.2] text-paper">
                 {p.title}
               </h3>
-              <p className="mt-4 text-[14px] leading-[1.75] text-[#9D9D9D]">{p.body}</p>
+              <p className="relative mt-4 text-[14px] leading-[1.75] text-[#B5B0A4]">{p.body}</p>
             </article>
           ))}
         </div>

@@ -27,10 +27,19 @@ export function WhoFor() {
           ))}
         </ul>
         <div className="mt-14 hairline" />
-        <p className="mt-10 italic text-center text-[#9D9D9D] text-[14px] md:text-[15px] leading-[1.7]">
-          This is NOT for you if you're looking for a shortcut with no execution required.
-          This is a system. It works when you work it.
-        </p>
+        <div
+          className="mt-10 mx-auto max-w-2xl rounded-lg border border-gold/50 bg-[#0A0A0A] px-7 py-8 text-center"
+          style={{ boxShadow: "0 0 60px -15px rgba(201,168,76,0.35), inset 0 0 30px rgba(201,168,76,0.05)" }}
+        >
+          <p className="label-eyebrow">Important</p>
+          <p className="mt-4 font-display italic text-paper text-[18px] md:text-[22px] leading-[1.55]">
+            This is <span className="not-italic font-bold gold-underline">NOT</span> for you if
+            you're looking for a shortcut with no execution required.
+          </p>
+          <p className="mt-3 text-[14px] md:text-[15px] text-[#C9C4BA] leading-[1.7]">
+            This is a system. <span className="text-gold font-semibold">It works when you work it.</span>
+          </p>
+        </div>
       </div>
     </section>
   );
