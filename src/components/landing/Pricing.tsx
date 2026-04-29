@@ -32,13 +32,10 @@ export function Pricing() {
 
         <div
           className="mt-14 mx-auto max-w-[600px] rounded-lg bg-[#050505] text-paper p-10 md:p-14 border border-gold/60 text-left"
-          style={{ boxShadow: "0 40px 100px -25px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.4), 0 0 60px -10px rgba(201,168,76,0.3)" }}
+          style={{ boxShadow: "0 50px 120px -20px rgba(255,255,255,0.35), 0 0 0 1px rgba(201,168,76,0.5), 0 0 80px -10px rgba(201,168,76,0.45)" }}
         >
-          <p className="text-gold text-center text-[12px] tracking-[0.32em] uppercase font-semibold">
-            The Playbook
-          </p>
-          <div className="my-6 hairline" />
-          <ul className="space-y-3.5">
+          <div className="hairline" />
+          <ul className="space-y-3.5 mt-6">
             {INCLUDES.map((i) => (
               <li key={i} className="flex gap-3 text-[14px] leading-[1.55] text-paper">
                 <span className="text-gold shrink-0">✦</span>
