@@ -18,19 +18,19 @@ const FAQS = [
 export function FAQ() {
   const ref = useFadeIn<HTMLElement>();
   return (
-    <section ref={ref} className="bg-paper text-ink">
-      <div className="mx-auto max-w-[820px] px-5 md:px-10 py-24 md:py-36">
+    <section ref={ref} className="bg-ink text-paper">
+      <div className="mx-auto max-w-[820px] px-5 md:px-10 py-28 md:py-40">
         <p className="label-eyebrow text-center">Questions</p>
-        <h2 className="mt-6 text-center font-display text-3xl md:text-5xl leading-[1.1]">
+        <h2 className="mt-6 text-center font-display text-3xl md:text-5xl leading-[1.1] text-paper">
           Everything <span className="italic">You're Wondering.</span>
         </h2>
-        <Accordion type="single" collapsible className="mt-14 divide-y divide-[var(--color-hairline)] border-y border-[var(--color-hairline)]">
+        <Accordion type="single" collapsible className="mt-14 divide-y divide-gold/20 border-y border-gold/20">
           {FAQS.map((f, i) => (
             <AccordionItem key={i} value={`q-${i}`} className="border-0">
-              <AccordionTrigger className="py-6 text-left text-[16px] md:text-[17px] font-semibold text-ink hover:no-underline [&>svg]:text-gold [&>svg]:size-5">
+              <AccordionTrigger className="py-6 text-left text-[16px] md:text-[17px] font-medium text-paper hover:no-underline hover:text-gold transition-colors duration-300 [&>svg]:text-gold [&>svg]:size-5">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="pb-6 text-[15px] leading-[1.75] text-[#555]">
+              <AccordionContent className="pb-6 text-[15px] leading-[1.75] text-[#C9C4BA]">
                 {f.a}
               </AccordionContent>
             </AccordionItem>
