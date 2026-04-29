@@ -31,15 +31,35 @@ export function WhatsInside() {
           {PARTS.map((p) => (
             <article
               key={p.n}
-              className="rounded-lg border border-[#1F1F1F] bg-[#0F0F0F] p-7 md:p-8 hover:border-gold/60 transition-colors duration-500"
+              className="card-luxe relative p-7 md:p-8 overflow-hidden"
+              style={{ boxShadow: "0 0 0 1px rgba(201,168,76,0.25), inset 0 1px 0 rgba(244,226,160,0.12)" }}
             >
-              <p className="text-gold text-[11px] tracking-[0.22em] uppercase font-semibold">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 opacity-60"
+                style={{
+                  background: "linear-gradient(110deg, transparent 30%, rgba(244,226,160,0.18) 50%, transparent 70%)",
+                  backgroundSize: "200% 100%",
+                  animation: "shimmer 5s linear infinite",
+                }}
+              />
+              <p
+                className="relative text-[11px] tracking-[0.22em] uppercase font-semibold"
+                style={{
+                  background: "var(--gradient-gold-shimmer)",
+                  backgroundSize: "200% auto",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  animation: "shimmer 4s linear infinite",
+                }}
+              >
                 Part {p.n}
               </p>
-              <h3 className="mt-3 font-display text-[22px] md:text-[26px] leading-[1.2] text-paper">
+              <h3 className="relative mt-3 font-display text-[22px] md:text-[26px] leading-[1.2] text-paper">
                 {p.title}
               </h3>
-              <p className="mt-4 text-[14px] leading-[1.75] text-[#9D9D9D]">{p.body}</p>
+              <p className="relative mt-4 text-[14px] leading-[1.75] text-[#B5B0A4]">{p.body}</p>
             </article>
           ))}
         </div>
