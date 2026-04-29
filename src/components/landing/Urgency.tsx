@@ -8,10 +8,11 @@ const DURATION = 24 * 60 * 60 * 1000;
 
 function getDeadline(): number {
   if (typeof window === "undefined") return Date.now() + DURATION;
-  const saved = Number(localStorage.getItem(KEY));
+  // Per-session: restart for every new visit
+  const saved = Number(sessionStorage.getItem(KEY));
   if (saved && saved > Date.now()) return saved;
   const next = Date.now() + DURATION;
-  localStorage.setItem(KEY, String(next));
+  sessionStorage.setItem(KEY, String(next));
   return next;
 }
 
