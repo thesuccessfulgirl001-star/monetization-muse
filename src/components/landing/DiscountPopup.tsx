@@ -93,7 +93,7 @@ export function DiscountPopup() {
             </h3>
             <p className="mt-5 text-[14px] leading-[1.7] text-[#C9C4BA]">
               The limited-time discount has ended. The playbook is still available at the
-              standard price of <span className="text-gold font-semibold">${PRICE_FULL}</span>.
+              standard price of <span className="text-gold font-semibold">$47</span>.
             </p>
             <a
               href={WHOP_URL}
