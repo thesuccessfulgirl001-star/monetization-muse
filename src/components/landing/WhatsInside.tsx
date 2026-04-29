@@ -5,7 +5,7 @@ const PARTS: { n: string; title: string; body: string }[] = [
   { n: "02", title: "The Style Utility Gap", body: "Why \"inspo\" is free and always will be — and how to position yourself in the one zone of the market where people actually spend money." },
   { n: "03", title: "Research & Validation", body: "Three copy-paste Manus prompts that do your entire competitor research, audience pain analysis, and Instagram audit in under 48 hours." },
   { n: "04", title: "Product Creation with AI", body: "The exact Manus prompt that generates your complete digital product — outline, module content, offer name, and sales copy — in one session." },
-  { n: "05", title: "Every Tool You Need", body: "Manus · Gamma · Canva · Figma · Lovable · Carrd · Systeme.io · ConvertKit · MailerLite · Stripe · Gumroad · Whop. Every tool named, every prompt written for you — copy, paste, launch." },
+  { n: "05", title: "Every Tool You Need", body: "A curated stack of the exact AI, design, email, and checkout tools that power the entire system — pre-mapped to each step so you never waste time researching what to use or how to use it." },
   { n: "06", title: "The Grand Slam Offer", body: "How to package your product so it feels worth $300 and sells for $47. The value stack formula, the three pricing tiers, and the price anchor line that makes buyers feel smart for purchasing." },
   { n: "07", title: "The Landing Page", body: "Section-by-section copy for your entire sales page — plus a full Lovable prompt that generates the whole thing in minutes." },
   { n: "08", title: "The 21-Day Content Warm-Up", body: "A day-by-day plan across 6 emotional layers with hooks, post ideas, story formats, and CTAs — all designed to have your audience ready to buy before the cart even opens." },
