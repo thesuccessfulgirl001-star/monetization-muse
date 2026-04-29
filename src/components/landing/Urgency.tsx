@@ -50,9 +50,9 @@ export function Urgency() {
           Early buyers get the best price. That's you, right now.
         </p>
 
-        <div className="mt-14 mx-auto inline-flex items-center gap-6 md:gap-9 bg-[#080808] border border-gold/40 rounded-lg px-7 md:px-14 py-7 md:py-10"
-          style={{ boxShadow: "0 0 60px -10px rgba(201,168,76,0.25), inset 0 0 40px rgba(201,168,76,0.05)" }}>
-          <AnalogClock size={92} />
+        <div className="mt-14 mx-auto inline-flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-[#080808] border border-gold/40 rounded-lg px-7 md:px-16 py-9 md:py-12"
+          style={{ boxShadow: "0 0 80px -10px rgba(201,168,76,0.3), inset 0 0 50px rgba(201,168,76,0.06)" }}>
+          <AnalogClock size={160} />
           <div className="flex items-end gap-4 md:gap-7">
             {[
               { v: h, l: "Hours" },
