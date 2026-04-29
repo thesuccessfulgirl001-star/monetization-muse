@@ -14,7 +14,7 @@ export function Footer() {
         </div>
         <div className="mt-12 hairline" />
         <p className="mt-6 text-center text-[11px] text-[#777]">
-          © 2025 · All rights reserved · Checkout powered by Whop
+          © 2026· All rights reserved · Checkout powered by Whop
         </p>
       </div>
     </footer>
