@@ -1,4 +1,4 @@
-import { WHOP_URL, PRICE_FULL } from "./constants";
+import { WHOP_URL, PRICE_FULL, PRICE_TOTAL_VALUE } from "./constants";
 import { useFadeIn } from "@/hooks/use-fade-in";
 
 const INCLUDES = [
@@ -17,10 +17,15 @@ const INCLUDES = [
 export function Pricing() {
   const ref = useFadeIn<HTMLElement>();
   return (
-    <section ref={ref} id="pricing" className="bg-cream text-ink">
-      <div className="mx-auto max-w-[900px] px-5 md:px-10 py-24 md:py-36 text-center">
+    <section ref={ref} id="pricing" className="bg-cream text-ink relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(201,168,76,0.18), transparent 70%)" }}
+      />
+      <div className="relative mx-auto max-w-[900px] px-5 md:px-10 py-28 md:py-40 text-center">
         <p className="label-eyebrow">Get Access Today</p>
-        <h2 className="mt-6 font-display text-3xl md:text-5xl leading-[1.1]">
+        <h2 className="mt-6 font-display text-3xl md:text-5xl leading-[1.1] text-ink">
           The Fashion Creator's <span className="italic">$1,000+</span> Monetization Playbook.
         </h2>
         <p className="mt-6 text-[#555] text-[15px] max-w-xl mx-auto">
@@ -28,10 +33,10 @@ export function Pricing() {
         </p>
 
         <div
-          className="mt-14 mx-auto max-w-[560px] rounded-lg bg-ink text-paper p-8 md:p-12 border border-gold text-left"
-          style={{ boxShadow: "0 30px 80px -25px rgba(201,168,76,0.45), 0 0 0 1px rgba(201,168,76,0.4)" }}
+          className="mt-14 mx-auto max-w-[600px] rounded-lg bg-[#050505] text-paper p-10 md:p-14 border border-gold/60 text-left"
+          style={{ boxShadow: "0 40px 100px -25px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.4), 0 0 60px -10px rgba(201,168,76,0.3)" }}
         >
-          <p className="text-gold text-center text-[12px] tracking-[0.28em] uppercase font-semibold">
+          <p className="text-gold text-center text-[12px] tracking-[0.32em] uppercase font-semibold">
             The Playbook
           </p>
           <div className="my-6 hairline" />
@@ -43,18 +48,26 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-          <div className="my-7 hairline" />
+          <div className="my-9 hairline" />
           <div className="text-center">
-            <p className="text-[#888] text-[13px] line-through">Total value: $322</p>
-            <p className="mt-2 font-display text-gold text-5xl md:text-6xl tracking-tight">
+            <p className="text-[#888] text-[14px] tracking-[0.18em] uppercase">
+              Total Value <span className="line-through ml-2">${PRICE_TOTAL_VALUE}</span>
+            </p>
+            <p
+              className="mt-3 font-display font-bold text-7xl md:text-[9rem] leading-none tracking-tight glow-pulse"
+              style={{ background: "var(--gradient-gold-shimmer)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}
+            >
               ${PRICE_FULL}
+            </p>
+            <p className="mt-3 text-[11px] text-gold tracking-[0.28em] uppercase font-semibold">
+              Today Only
             </p>
           </div>
           <a
             href={WHOP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 w-full btn-gold-fill"
+            className="mt-10 w-full btn-gold-fill"
             style={{ width: "100%" }}
           >
             Get Instant Access →

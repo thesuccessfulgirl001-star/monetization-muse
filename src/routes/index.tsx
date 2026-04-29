@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-paper text-ink">
+    <main className="bg-ink text-paper">
       <StickyNav />
       <Hero />
       <RealityCheck />
