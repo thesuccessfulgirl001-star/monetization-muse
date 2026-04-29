@@ -1,4 +1,4 @@
-import { WHOP_URL, PRICE_FULL, PRICE_TOTAL_VALUE } from "./constants";
+import { WHOP_URL, PRICE_DISCOUNT, PRICE_FULL } from "./constants";
 import { useFadeIn } from "@/hooks/use-fade-in";
 
 const INCLUDES = [
@@ -51,13 +51,13 @@ export function Pricing() {
           <div className="my-9 hairline" />
           <div className="text-center">
             <p className="text-[#888] text-[14px] tracking-[0.18em] uppercase">
-              Total Value <span className="line-through ml-2">${PRICE_TOTAL_VALUE}</span>
+              Total Value <span className="line-through ml-2">${PRICE_FULL}</span>
             </p>
             <p
               className="mt-3 font-display font-bold text-7xl md:text-[9rem] leading-none tracking-tight glow-pulse"
               style={{ background: "var(--gradient-gold-shimmer)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}
             >
-              ${PRICE_FULL}
+              ${PRICE_DISCOUNT}
             </p>
             <p className="mt-3 text-[11px] text-gold tracking-[0.28em] uppercase font-semibold">
               Today Only

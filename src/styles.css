@@ -339,9 +339,8 @@
 .analog-clock .hand-s {
   width: 1.5px;
   height: 36%;
-  background: #FFF1B8;
-  transform-origin: 50% 100%;
-  animation: sweep 60s linear infinite;
+  background: linear-gradient(to top, #FFF1B8, #F4E2A0);
+  box-shadow: 0 0 6px rgba(244,226,160,0.9);
 }
 .analog-clock .center {
   position: absolute;
