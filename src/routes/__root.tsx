@@ -72,5 +72,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <div className="page-shimmer" aria-hidden />
+      <Outlet />
+    </>
+  );
 }
